@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    
+</div>
+    
 </div>
 
 
@@ -111,42 +115,35 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2019-02-20</div>
-        <div class="post-info">
-            <a href="/2019/02/20/《Python编程快速上手》实践项目：疯狂填词/">
-                <h3>
-                    Untitled
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2019-02-10</div>
-        <div class="post-info">
-            <a href="/2019/02/10/hello-world/">
-                <h3>
-                    Hello World
-                </h3>
-            </a>
-            <p>
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
-</ul>
 
+
+<div class="post-container">
+    <div class="post-title">
+        
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-02-20 16:48:16</span></span>
+        
+        
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># �ο���https://blog.csdn.net/gaifuxi9518/article/details/80298012</span><br><span class="line">text = &apos;The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was unaffected by these events.&apos;</span><br><span class="line">wordsFile = open(&apos;words.txt&apos;,&apos;w&apos;)</span><br><span class="line">wordsFile.write(text)</span><br><span class="line"></span><br><span class="line">wordsFile = open(&apos;words.txt&apos;,&apos;r&apos;)</span><br><span class="line">newWordFile = open(&apos;newwords.txt&apos;,&apos;w&apos;)</span><br><span class="line">content = wordsFile.read()</span><br><span class="line"></span><br><span class="line">wordReplace = [&apos;ADJECTIVE&apos;, &apos;NOUN&apos;, &apos;VERB&apos;, &apos;NOUN&apos;]</span><br><span class="line">length = len(wordReplace)</span><br><span class="line"></span><br><span class="line">for i in range(length):</span><br><span class="line">	if wordReplace[i] == &apos;ADJECTIVE&apos;:</span><br><span class="line">		print(&apos;Enter an &apos; + wordReplace[i].lower() + &apos;:&apos;)</span><br><span class="line">	else:</span><br><span class="line">		print(&apos;Enter a &apos; + wordReplace[i].lower() + &apos;:&apos;)</span><br><span class="line">	new = input()</span><br><span class="line">	content = content.replace(wordReplace[i], new)</span><br><span class="line">	</span><br><span class="line">newWordFile.write(content)</span><br><span class="line">wordsFile.close()</span><br><span class="line">newWordFile.close()</span><br></pre></td></tr></table></figure>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
     </div>
 </div>
 
@@ -185,7 +182,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
